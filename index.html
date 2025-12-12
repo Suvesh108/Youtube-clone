@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="YouTube Clone - Enhanced version with premium features, AI recommendations, and modern design">
+    <title>YouTube Clone - Home</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-left">
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-play"></i>
+                </div>
+                <span class="logo-text gradient-text">VidStream</span>
+            </div>
+        </div>
+        
+        <div class="header-center">
+            <div class="search-container">
+                <div class="search-bar">
+                    <input 
+                        type="text" 
+                        class="search-input" 
+                        placeholder="Search videos..." 
+                        id="searchInput"
+                        aria-label="Search videos"
+                    >
+                    <button class="search-button" id="searchButton" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="header-right">
+            
+            <div class="profile-container">
+                <div class="user-avatar" id="userAvatar">
+                    U
+                </div>
+                <div class="profile-dropdown" id="profileDropdown">
+                    <div class="profile-header" id="profileHeader" title="Click to edit profile">
+                        <div class="user-avatar large" id="profileAvatarDisplay">U</div>
+                        <div class="profile-info">
+                            <h4 id="profileNameDisplay">Your Channel</h4>
+                            <p class="edit-hint">Click to edit profile</p>
+                        </div>
+                        <input type="file" id="avatarUpload" accept="image/*" style="display: none;">
+                    </div>
+                    <div class="profile-menu">
+                        <div class="profile-menu-item" id="appearanceMenu">
+                            <i class="fas fa-moon"></i>
+                            <span>Appearance: <span id="currentThemeLabel">Device Theme</span></span>
+                            <i class="fas fa-chevron-right" style="margin-left: auto; font-size: 12px;"></i>
+                        </div>
+                        <div class="theme-options" id="themeOptions" style="display: none;">
+                            <div class="theme-option-item" data-theme="dark">
+                                <i class="fas fa-check" style="opacity: 0;"></i>
+                                <span>Dark theme</span>
+                            </div>
+                            <div class="theme-option-item" data-theme="light">
+                                <i class="fas fa-check" style="opacity: 0;"></i>
+                                <span>Light theme</span>
+                            </div>
+                            <div class="theme-option-item" data-theme="auto">
+                                <i class="fas fa-check" style="opacity: 0;"></i>
+                                <span>Use device theme</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- App Container -->
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-section">
+                <div class="sidebar-item active">
+                    <i class="sidebar-item-icon fas fa-home"></i>
+                    <span class="sidebar-item-text">Home</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="sidebar-item-icon fas fa-fire"></i>
+                    <span class="sidebar-item-text">Trending</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="sidebar-item-icon fas fa-compass"></i>
+                    <span class="sidebar-item-text">Explore</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="sidebar-item-icon fas fa-play-circle"></i>
+                    <span class="sidebar-item-text">Subscriptions</span>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <div class="sidebar-section-title">Library</div>
+                <div class="sidebar-item">
+                    <i class="sidebar-item-icon fas fa-history"></i>
+                    <span class="sidebar-item-text">History</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="sidebar-item-icon fas fa-list"></i>
+                    <span class="sidebar-item-text">Playlists</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="sidebar-item-icon fas fa-clock"></i>
+                    <span class="sidebar-item-text">Watch Later</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="sidebar-item-icon fas fa-thumbs-up"></i>
+                    <span class="sidebar-item-text">Liked Videos</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="sidebar-item-icon fas fa-bookmark"></i>
+                    <span class="sidebar-item-text">Bookmarks</span>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <div class="sidebar-section-title">Categories</div>
+                <div class="sidebar-item">
+                    <i class="sidebar-item-icon fas fa-music"></i>
+                    <span class="sidebar-item-text">Music</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="sidebar-item-icon fas fa-gamepad"></i>
+                    <span class="sidebar-item-text">Gaming</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="sidebar-item-icon fas fa-newspaper"></i>
+                    <span class="sidebar-item-text">News</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="sidebar-item-icon fas fa-trophy"></i>
+                    <span class="sidebar-item-text">Sports</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="sidebar-item-icon fas fa-lightbulb"></i>
+                    <span class="sidebar-item-text">Learning</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Category Filter Chips -->
+            <div class="category-chips">
+                <button class="chip active" data-category="all">All</button>
+                <button class="chip" data-category="music">Music</button>
+                <button class="chip" data-category="gaming">Gaming</button>
+                <button class="chip" data-category="news">News</button>
+                <button class="chip" data-category="sports">Sports</button>
+                <button class="chip" data-category="education">Education</button>
+                <button class="chip" data-category="technology">Technology</button>
+                <button class="chip" data-category="entertainment">Entertainment</button>
+                <button class="chip" data-category="cooking">Cooking</button>
+                <button class="chip" data-category="travel">Travel</button>
+            </div>
+
+            <!-- Video Grid -->
+            <div class="video-grid" id="videoGrid">
+                <!-- Videos will be dynamically loaded here -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Toast Notifications Container -->
+    <div id="toastContainer" style="position: fixed; top: 80px; right: 20px; z-index: 2000; display: flex; flex-direction: column; gap: 10px;"></div>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>
